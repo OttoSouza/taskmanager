@@ -1,23 +1,24 @@
 import React from "react";
-import TaskList from "../../components/TaskList";
-import TaskForm from "../../components/TaskForm";
+import List from "../../components/List";
 import Header from "../../components/Header";
-import TaskContextProvider from "../../context/Task";
-import "../../App.css";
-function PageHome() {
+import Form from "../../components/Form";
+import ListContextProvider from '../../context/List'
+import "./styles.css";
+
+function Home() {
   return (
-    <TaskContextProvider>
-      <div className="container">
-        <div className="app-wrapper">
-            <Header/>
-          <div className="main">
-            <TaskForm/>
-            <TaskList />;
-          </div>
+    <ListContextProvider>
+    <div className="container">
+      <div className="app-container">
+        <Header />
+        <div className="main">
+          <Form />
+          <List />
         </div>
       </div>
-    </TaskContextProvider>
+    </div>
+    </ListContextProvider>
   );
 }
 
-export default PageHome;
+export default Home;

@@ -1,11 +1,8 @@
 import React from 'react';
-
 import PageHome from './pages/Home'
 function App() {
-  return (
-    <div className="App">
+  return (  
       <PageHome/>
-    </div>
   );
 }
 

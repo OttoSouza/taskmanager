@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
-import "../../App.css";
-import { TaskContext } from "../../context/Task";
-// import { Container } from './styles';
+import React, {useContext} from "react";
+import './styles.css'
+import {ListContext} from '../../context/List'
 
 function Header() {
-  const { tasks } = useContext(TaskContext);
+  const {list} = useContext(ListContext)
   return (
     <div className="header">
-      <h1>Task Manager {tasks.length}</h1>
+      <h1>List Manager</h1>
+      <span>I have {list.length} items</span>
     </div>
   );
 }
